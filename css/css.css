@@ -149,7 +149,7 @@ footer {
 #watermark {
   position: fixed;
   top: clamp(8px, 2vmin, 24px);           /* distance from the top */
-  left: clamp(4px, 0vmin, 12px);         /* move it to the middle horizontally */
+  left: clamp(4px, 1vmin, 12px);         /* move it to the middle horizontally */
   transform: translateX(-50%); /* actually center it */
   width: clamp(4rem, 16vw, 12rem);      /* adjust size as you like */
   opacity: 0.8;        /* transparency like a watermark */
