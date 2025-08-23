@@ -153,7 +153,7 @@ footer {
   transform: translateX(-50%); /* actually center it */
   width: clamp(4rem, 16vw, 12rem);      /* adjust size as you like */
   opacity: 0.8;        /* transparency like a watermark */
-  z-index: 9999;       /* keep it above video & slides */
+  z-index: 999999;       /* keep it above video & slides */
   pointer-events: auto; /* don’t block clicks */
 }
 
