@@ -15,7 +15,7 @@
 
     <div class="slide">
   <video autoplay muted loop playsinline id="bg-video">
-    <source src="video/lastvideo.mp4" type="video/mp4">
+    <source src="video/111.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -57,6 +57,36 @@
 
         </main>
 
+<script>
+  const videoPlayer = document.getElementById("bg-video");
+  const sources = [
+    "video/video1.mp4", // first video
+    "video/video2.mp4"  // second video
+  ];
+
+  let currentIndex = 0;
+
+  function playNextVideo() {
+    videoPlayer.src = sources[currentIndex];
+    videoPlayer.play();
+  }
+
+  videoPlayer.addEventListener("ended", () => {
+    currentIndex++;
+    if (currentIndex < sources.length) {
+      playNextVideo();
+    } else {
+      currentIndex = 0; // loop back to first video (remove if you want to stop after 2nd)
+      playNextVideo();
+    }
+  });
+
+  // start with first video
+  playNextVideo();
+</script>
+
+
+    
             <script>
   const slides = document.querySelectorAll('.slide');
   const toggleBtn = document.getElementById('slideToggleBtn');
